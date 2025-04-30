@@ -40,8 +40,7 @@ func TestGetAPIKeyTooShort(t *testing.T) {
 	headers.Add("Authorization", "TestKey")
 	got, err := GetAPIKey(headers)
 	want := ""
-	// Force fail
-	if err != nil {
+	if err == nil {
 		t.Fatalf("expected: %v, got: %v", want, got)
 	}
 }
