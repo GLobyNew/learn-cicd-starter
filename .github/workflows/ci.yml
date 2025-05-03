@@ -1,3 +1,4 @@
+---
 name: ci
 
 on:
@@ -24,7 +25,7 @@ jobs:
     name: Styles
     runs-on: ubuntu-latest
 
-  steps:
+    steps:
       - name: Check out code
         uses: actions/checkout@v4
 
@@ -35,4 +36,3 @@ jobs:
 
       - name: Format code
         run: test -z $(go fmt ./...)
-
